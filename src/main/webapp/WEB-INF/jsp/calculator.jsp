@@ -22,13 +22,17 @@
             <input type="text" id="duration" name="duration">
         </label>
         <br />
-        <p>${suit}</p>
-        <p>${invalid}</p>
-        <input type="submit" value="Calculate"/>
+        <label>
+            <p>${monthlyPayment}</p>
+            <p>${unsuitable}</p>
+            <p>${invalid}</p>
+        </label>
+        <button type="submit" value="Calculate" name="button">
+            Calculate
+        </button>
+        <button type="submit" value="Save" name="button">
+            Save
+        </button>
     </form>
-    <label>
-        <p>${monthlyPayment}</p>
-
-    </label>
 </body>
 </html>
