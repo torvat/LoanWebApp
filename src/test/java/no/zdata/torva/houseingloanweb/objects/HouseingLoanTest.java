@@ -15,16 +15,16 @@ class HouseingLoanTest {
 
     @Test
     void calculation_1() {
-        assertEquals(8625, loan_1.calculateMothlyBackpay());
+        assertEquals(8625, loan_1.calculateMonthlyPayment());
     }
     @Test
 
     void calculation_2() {
-        assertEquals(0, loan_2.calculateMothlyBackpay());
+        assertEquals(0, loan_2.calculateMonthlyPayment());
     }
     @Test
     void calculation_3() {
-        Exception exception = assertThrows(RuntimeException.class, () -> loan_3.calculateMothlyBackpay());
+        Exception exception = assertThrows(RuntimeException.class, () -> loan_3.calculateMonthlyPayment());
 
         String expectedMessage = "Duration cannot be 0 or less";
         String actualMessage = exception.getMessage();
@@ -34,12 +34,12 @@ class HouseingLoanTest {
     @Test
 
     void calculation_4 () {
-        assertEquals(0.8625, loan_4.calculateMothlyBackpay());
+        assertEquals(0.8625, loan_4.calculateMonthlyPayment());
     }
     @Test
 
     void calculation_5 () {
-        assertEquals(8625, loan_5.calculateMothlyBackpay());
+        assertEquals(8625, loan_5.calculateMonthlyPayment());
 
     }
 }
