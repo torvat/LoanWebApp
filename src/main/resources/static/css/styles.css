@@ -1,0 +1,30 @@
+body
+{
+    background-color: #87d2d2;
+}
+div
+{
+    text-align: center;
+    margin-top: 50px;
+    font-size: large;
+}
+button
+{
+    font-size: medium;
+    margin-top: 15px;
+    padding: 5px;
+    position:relative; left: 35px;
+}
+
+h3{
+    position: relative;left: 15px;
+}
+
+.movelabel
+{
+    position: relative;left: 40px;
+}
+.breaklines
+{
+    white-space: pre-wrap;
+}
