@@ -9,17 +9,6 @@ public abstract class Loan {
     }
     public Loan(int amount, int duration) {
         this.amount = amount;
-        setDuration(duration);
-    }
-    public int getAmount() {
-        return this.amount;
-    }
-
-    public int getDuration() {
-        return this.duration;
-    }
-
-    public void setDuration(int duration){
         if(duration <= 0) {
             throw new RuntimeException("Duration cannot be 0 or less");
         }else{
@@ -31,6 +20,11 @@ public abstract class Loan {
     }
     public double calculateMonthlyPayment(){
         return 0;
+    }
+
+    protected double calculate(Calculate calculate){
+        int periods = this.duration * this.MONTHS;
+        return calculate.monthlyPayment(this.amount, periods);
     }
     @Override
     public String toString() {
